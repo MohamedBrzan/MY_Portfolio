@@ -1,0 +1,74 @@
+@use './scss/Variables' as *;
+
+* {
+  cursor: none;
+}
+
+body,
+html {
+  background-color: $main_color;
+}
+.app {
+  position: relative;
+  .inner_cursor {
+    position: fixed;
+    left: 10px;
+    width: 2rem;
+    height: 2rem;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.3s, height 0.3s;
+    &.active {
+      width: 3rem;
+      height: 3rem;
+      transition: width 0.3s, height 0.3s, background-color 1s;
+    }
+    &.open {
+      width: 5rem;
+      height: 5rem;
+      background-color: #000;
+      transition: width 0.3s, height 0.3s, background-color 1s;
+      &::before {
+        content: 'Open';
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        color: #000;
+        padding: 0.3rem;
+        font: {
+          size: 1rem;
+          weight: bold;
+        }
+        background-color: #fff;
+        border-radius: 2rem;
+        font-family: 'Rajdhani', sans-serif;
+      }
+    }
+    z-index: 999;
+  }
+  .outer_cursor {
+    position: fixed;
+    left: 10px;
+    width: 3rem;
+    height: 3rem;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    &.open {
+      width: 5rem;
+      height: 5rem;
+    }
+    z-index: 999;
+  }
+
+  .touch {
+    font-size: 10rem;
+  }
+}

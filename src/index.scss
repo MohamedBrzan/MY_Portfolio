@@ -1,0 +1,14 @@
+@use '/src/Scss/Variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+::selection {
+  background-color: $third_color;
+  color: $main_color;
+}

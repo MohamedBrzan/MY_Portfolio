@@ -1,0 +1,139 @@
+@use '../../Scss/Variables' as *;
+@use '../../Scss/Mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+%handle_Section {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  @include MediaQuery('md') {
+    width: 60rem;
+    height: 30rem;
+  }
+}
+
+.home {
+  position: relative;
+  max-height: 100vh;
+  overflow: hidden;
+  .intro_text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    @extend %handle_Section;
+    .name {
+      margin: 0 0 2rem;
+      h1 {
+        font-family: 'Bungee', cursive;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: black;
+        line-height: 1.6;
+
+        &.glitch {
+          text-shadow: 0.05rem 0 0 red, -0.025rem -0.05rem green,
+            0.025rem 0.05rem blue, -0.025rem -0.05rem purple,
+            0.05rem 0 0 aquamarine;
+
+          animation: glitch-loop-1 0.6s infinite alternate-reverse;
+        }
+      }
+    }
+    .bio {
+      text-transform: capitalize;
+      p {
+        font: {
+          family: 'Rajdhani', sans-serif;
+          weight: 500;
+          size: 1.5rem;
+        }
+        color: $third_color;
+        line-height: 1.6;
+      }
+    }
+  }
+  .social_links {
+    display: flex;
+    justify-content: space-between;
+    @extend %handle_Section;
+    background-color: $main_color;
+    border-radius: 0.3rem;
+    border: 0.1rem solid $third_color;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    @include MediaQuery('sm') {
+      position: relative;
+      border: none;
+      justify-content: flex-start;
+      align-items: center;
+      width: 60rem;
+    }
+    a {
+      padding: 1rem;
+      figure {
+        cursor: pointer;
+        width: 1.4rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  hr {
+    background-color: $third_color;
+  }
+  .intro_title {
+    width: 100%;
+    color: $secondary_color;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    h1 {
+      width: 100% ;
+      font-family: 'Sigmar', cursive;
+      font-size: 10rem;
+      letter-spacing: 2rem;
+      opacity: 0.2;
+      @include MediaQuery('xs') {
+        font-size: 5rem;
+      }
+      @include MediaQuery('sm') {
+        font-size: 8rem;
+      }
+    }
+  }
+}
+
+@keyframes glitch-loop-1 {
+  0% {
+    text-shadow: 0.05rem 0 0 red, -0.025rem -0.05rem green,
+      0.025rem 0.05rem blue, -0.025rem -0.05rem purple, 0.05rem 0 0 aquamarine;
+  }
+  25% {
+    text-shadow: 0.1rem 0 0 rgb(29, 192, 14),
+      -0.025rem -0.05rem rgb(74, 104, 74), 0.025rem 0.05rem blue,
+      -0.025rem -0.05rem rgb(134, 139, 137), 0.05rem 0 0 rgb(96, 8, 136);
+  }
+  50% {
+    text-shadow: 0.05rem 0 0 red, -0.025rem -0.05rem rgb(74, 104, 74),
+      0.025rem 0.05rem blue, -0.025rem -0.05rem rgb(32, 228, 156),
+      0.2rem 0 0 rgb(217, 42, 153);
+  }
+  75% {
+    text-shadow: 0.09rem 0 0 red, -0.025rem -0.05rem rgb(74, 104, 74),
+      0.025rem 0.05rem rgb(42, 177, 60), -0.025rem -0.05rem rgb(32, 228, 156),
+      0.09rem 0 0 rgb(54, 227, 11);
+  }
+  100% {
+    text-shadow: 0.05rem 0 0 red, -0.025rem -0.05rem green,
+      0.025rem 0.05rem blue, -0.025rem -0.05rem purple, 0.05rem 0 0 aquamarine;
+  }
+}
