@@ -1,0 +1,10 @@
+@use './Mixins' as *;
+
+%responsive_width {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  @include MediaQuery('md') {
+    width: 60rem;
+  }
+}

@@ -53,6 +53,9 @@ header {
           text-decoration: none;
           color: black;
           margin: 1rem;
+          &.active {
+            display: none;
+          }
         }
         &::before {
           content: '';

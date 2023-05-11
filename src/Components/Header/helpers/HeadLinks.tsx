@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const HeadLinks = () => {
   const ulRef = useRef(document.createElement('ul'));
@@ -19,16 +19,18 @@ const HeadLinks = () => {
     <nav className='head_links'>
       <ul ref={ulRef}>
         <li>
-          <Link to='/about'>About</Link>
+          <NavLink to='/about' className=''>
+            About
+          </NavLink>
         </li>
         <li>
-          <Link to='/projects'>projects</Link>
+          <NavLink to='/projects'>projects</NavLink>
         </li>
         <li>
-          <Link to='/resume'>Resume</Link>
+          <NavLink to='/resume'>Resume</NavLink>
         </li>
         <li>
-          <Link to='/contact'>Contact</Link>
+          <NavLink to='/contact'>Contact</NavLink>
         </li>
       </ul>
     </nav>
