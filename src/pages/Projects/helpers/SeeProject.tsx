@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CloseProjectPage } from '../../../Functions/ShowProjectPage';
 import Project from '../../../Ts/interfaces/Project';
@@ -7,7 +6,7 @@ import CloseMenu from '/close.svg';
 import externalLink from '/external-link.svg';
 
 const SeeProject = (props: Project) => {
-  const { title, image, desc, about, category, techs, website, github } = props;
+  const { title, image, desc, about, techs, website, github } = props;
 
   return (
     <div className='see_project'>

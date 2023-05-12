@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
+// import  { useState } from 'react';
+// import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
 
 const PDFReader = () => {
-  const [numPages, setNumPages] = useState<number | null>(null);
-  const [pageNumber, setPageNumber] = useState<number>(1);
+  // const [numPages, setNumPages] = useState<number | null>(null);
+  // const [pageNumber, setPageNumber] = useState<number>(1);
 
-  function onDocumentLoadSuccess(pages: number) {
-    console.log(pages);
-    setNumPages(pages);
-  }
+  // function onDocumentLoadSuccess(pages: number) {
+  //   console.log(pages);
+  //   setNumPages(pages);
+  // }
   return (
     <div>
-      <Document
+      {/* <Document
         file='/public/MohamedBrzan_CV.pdf'
-        onLoadSuccess={onDocumentLoadSuccess}
+        // onLoadSuccess={onDocumentLoadSuccess}
       >
         <Page pageNumber={pageNumber} />
       </Document>
       <p>
         Page {pageNumber} of {numPages}
-      </p>
+      </p> */}
     </div>
   );
 };
