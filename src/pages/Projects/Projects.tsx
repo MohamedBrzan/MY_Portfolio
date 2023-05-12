@@ -1,15 +1,11 @@
 import { useEffect } from 'react';
-import BackendProj from './helpers/backendProj';
-import FrontendProj from './helpers/FrontendProj';
-import FullStackProj from './helpers/FullStackProj';
-import UiUxProj from './helpers/UIUXProj';
-
+import ProjectsData from './helpers/ProjectsData';
 import './Projects.scss';
 
 const Projects = () => {
   useEffect(() => {
     const tabs = document.querySelectorAll('.projects .tabs .tab');
-    const sections = document.querySelectorAll('.projects .projects_sections');
+    const sections = document.querySelectorAll('.projects .projects_sections .project');
 
     document.querySelectorAll('.projects .tabs .tab').forEach((tab) => {
       tab.addEventListener('click', () => {
@@ -66,10 +62,11 @@ const Projects = () => {
           UI&UX
         </li>
       </ul>
-      <FrontendProj />
-      <BackendProj />
-      <FullStackProj />
-      <UiUxProj />
+      <ProjectsData />
+
+      <div className='intro_title'>
+        <h1>Projects!</h1>
+      </div>
     </section>
   );
 };
