@@ -136,6 +136,7 @@
         align-items: center;
         border-radius: 0.5rem;
         .text {
+          padding: 1rem;
           color: white;
           h3 {
             @include MediaQuery('md') {
