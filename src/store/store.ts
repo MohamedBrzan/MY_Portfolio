@@ -6,6 +6,7 @@ const initialState: Project = {
   about: '',
   image: '',
   techs: [''],
+  category: '',
   website: '',
   github: '',
 };

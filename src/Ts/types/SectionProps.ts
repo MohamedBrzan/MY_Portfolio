@@ -1,5 +1,5 @@
+import Action from '../../store/action';
 import Project from '../interfaces/Project';
-import Action from './Action';
 
 type SectionProps = {
   initialState: Project;
