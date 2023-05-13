@@ -27,16 +27,17 @@
       margin: 0 0 2rem;
       h1 {
         font-family: 'Bungee', cursive;
-        font-size: 3rem;
+        font-size: 2rem;
         text-transform: uppercase;
         color: black;
         line-height: 1.6;
-
+        @include MediaQuery('md') {
+          font-size: 3rem;
+        }
         &.glitch {
           text-shadow: 0.05rem 0 0 red, -0.025rem -0.05rem green,
             0.025rem 0.05rem blue, -0.025rem -0.05rem purple,
             0.05rem 0 0 aquamarine;
-
           animation: glitch-loop-1 0.6s infinite alternate-reverse;
         }
       }
@@ -47,7 +48,10 @@
         font: {
           family: 'Rajdhani', sans-serif;
           weight: 500;
-          size: 1.5rem;
+          size: 1rem;
+        }
+        @include MediaQuery('md') {
+          font-size: 1.5rem;
         }
         color: $third_color;
         line-height: 1.6;
@@ -55,6 +59,7 @@
     }
   }
   .social_links {
+    position: relative;
     display: flex;
     justify-content: space-between;
     @extend %responsive_width;
@@ -69,6 +74,7 @@
     left: 0;
     width: 100%;
     height: auto;
+    z-index: 2;
     @include MediaQuery('sm') {
       position: relative;
       border: none;
@@ -99,6 +105,7 @@
     overflow: hidden;
     display: flex;
     flex-wrap: nowrap;
+    z-index: 1;
     h1 {
       width: 100%;
       font: {
@@ -110,7 +117,6 @@
       @include MediaQuery('md') {
         font-size: 12rem;
       }
-   
     }
   }
 }
