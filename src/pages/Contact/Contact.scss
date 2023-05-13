@@ -48,6 +48,20 @@
       color: black;
     }
   }
+  .thanks_message {
+    text-align: center;
+    font-size: 1.5rem;
+    @include MediaQuery('md') {
+      font-size: 1rem;
+    }
+    padding: 1rem;
+    color: $fourth_color;
+    background-color: $secondary_color;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
   form {
     position: relative;
     @extend %responsive_width;

@@ -36,13 +36,15 @@ const SeeProject = (props: Project) => {
           </div>
           <div className='project_techs'>
             <h3>Technologies</h3>
-            {techs.map((tech, index) => (
-              <span key={index}>
-                <strong>
-                  <small>{tech}</small>
-                </strong>
-              </span>
-            ))}
+            <div className='techs'>
+              {techs.map((tech, index) => (
+                <span key={index}>
+                  <strong>
+                    <small>{tech}</small>
+                  </strong>
+                </span>
+              ))}
+            </div>
           </div>
           <div className='website_url'>
             <div className='top'>

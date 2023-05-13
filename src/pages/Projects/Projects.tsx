@@ -5,7 +5,9 @@ import './Projects.scss';
 const Projects = () => {
   useEffect(() => {
     const tabs = document.querySelectorAll('.projects .tabs .tab');
-    const sections = document.querySelectorAll('.projects .projects_sections .project');
+    const sections = document.querySelectorAll(
+      '.projects .projects_sections .project'
+    );
 
     document.querySelectorAll('.projects .tabs .tab').forEach((tab) => {
       tab.addEventListener('click', () => {
@@ -49,7 +51,7 @@ const Projects = () => {
         <li className='tab active' data-select='all'>
           All
         </li>
-        <li className='tab' data-select='frontend'>
+        {/* <li className='tab' data-select='frontend'>
           Frontend
         </li>
         <li className='tab' data-select='backend'>
@@ -60,7 +62,7 @@ const Projects = () => {
         </li>
         <li className='tab' data-select='ui-ux'>
           UI&UX
-        </li>
+        </li> */}
       </ul>
       <ProjectsData />
 

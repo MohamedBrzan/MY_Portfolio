@@ -7,10 +7,22 @@ import './Home.scss';
 
 const Home = () => {
   const links = [
-    { name: 'GitHub', url: 'https://github.com/', image: GitHub },
-    { name: 'Linkedin', url: 'https://github.com/', image: Linkedin },
-    { name: 'Whatsapp', url: 'https://github.com/', image: Whatsapp },
-    { name: 'Gmail', url: 'https://github.com/', image: Gmail },
+    { name: 'GitHub', url: 'https://github.com/MohamedBrzan', image: GitHub },
+    {
+      name: 'Linkedin',
+      url: 'https://www.linkedin.com/in/mohamed-brzan-01966518a/',
+      image: Linkedin,
+    },
+    {
+      name: 'Whatsapp',
+      url: 'whatsapp://send?abid=+201113772369',
+      image: Whatsapp,
+    },
+    {
+      name: 'Gmail',
+      url: 'mailto:mohamedmahmoudbrzan@gmail.com',
+      image: Gmail,
+    },
   ];
 
   return (

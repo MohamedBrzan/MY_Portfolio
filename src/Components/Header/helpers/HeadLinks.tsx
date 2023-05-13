@@ -26,12 +26,12 @@ const HeadLinks = () => {
         <li>
           <NavLink to='/projects'>projects</NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to='/resume'>Resume</NavLink>
-        </li>
-        <li>
+        </li> */}
+        {/* <li>
           <NavLink to='/contact'>Contact</NavLink>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
