@@ -261,7 +261,6 @@
       }
       .content {
         padding: 1rem;
-        overflow-y: scroll;
         @include MediaQuery('md') {
           overflow-y: hidden;
         }
@@ -341,7 +340,7 @@
         place-items: center;
         background-color: black;
         color: $main_color;
-        padding: .25rem;
+        padding: 0.25rem;
         width: 100%;
         a {
           text-decoration: none;
@@ -353,6 +352,7 @@
           background-color: white;
           display: flex;
           align-items: center;
+          width: 100%;
           figure {
             width: 1rem;
             height: 1rem;

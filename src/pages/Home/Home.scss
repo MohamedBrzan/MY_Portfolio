@@ -99,13 +99,16 @@
   }
   .intro_title {
     position: fixed;
-    bottom: 0;
+    bottom: 5rem;
     width: 100%;
     color: $secondary_color;
     overflow: hidden;
     display: flex;
     flex-wrap: nowrap;
     z-index: 1;
+    @include MediaQuery('md') {
+      bottom: 0;
+    }
     h1 {
       width: 100%;
       font: {
