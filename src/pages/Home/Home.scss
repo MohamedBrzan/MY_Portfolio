@@ -44,6 +44,7 @@
     }
     .bio {
       text-transform: capitalize;
+      word-break: break-all;
       p {
         font: {
           family: 'Rajdhani', sans-serif;
@@ -56,6 +57,14 @@
         color: $third_color;
         line-height: 1.6;
       }
+    }
+    .lang {
+      background-color: $third_color;
+      color: $main_color;
+      padding: 0 1rem;
+      border-radius: 5px;
+      margin: 0.1rem;
+      display: inline-block;
     }
   }
   .social_links {
