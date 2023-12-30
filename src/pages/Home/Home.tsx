@@ -36,11 +36,17 @@ const Home = () => {
           <p>
             Meet Mohamed Mahmoud, a talented frontend developer with a passion
             for creating beautiful and functional websites. With 2+ years of
-            experience in the industry, <br /> I honed my skills in JavaScript,
-            and other frontend technologies. <br /> Their portfolio showcases a
-            range of projects, from simple landing pages to complex web
-            applications, all designed with a keen eye for detail and user
-            experience.
+            experience in the industry, <br /> I honed my skills in{' '}
+            <div className='lang'>JavaScript</div>
+            <div className='lang'>React.js</div>
+            <div className='lang'>Node.js</div> <div className='lang'>Jest</div>
+            <div className='lang'>Sass</div>
+            <div className='lang'>Bootstrap</div>
+            <div className='lang'>Typescript</div>
+            <div className='lang'>Git</div>, and other frontend technologies.{' '}
+            <br /> Their portfolio showcases a range of projects, from simple
+            landing pages to complex web applications, all designed with a keen
+            eye for detail and user experience.
           </p>
         </div>
       </div>
