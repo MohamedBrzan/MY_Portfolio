@@ -1,0 +1,398 @@
+@use '../../Scss/Variables' as *;
+@use '../../Scss/Mixins' as *;
+@use '../../Scss/ClassNames' as *;
+
+%responsive_width {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  @include MediaQuery('md') {
+    width: 60rem;
+  }
+}
+
+%see_project_handle_section {
+  margin-top: 3rem;
+  line-height: 2;
+  h3 {
+    font: {
+      weight: 700;
+      size: 1.6rem;
+    }
+  }
+}
+
+.projects {
+  position: relative;
+  hr {
+    opacity: 0.3;
+  }
+  .title {
+    @extend %responsive_width;
+    padding: 2rem 0;
+    h1 {
+      font: {
+        weight: bold;
+        size: 3rem;
+      }
+      @include MediaQuery('md') {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  ul.tabs {
+    @extend %responsive_width;
+    padding: 5rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    li {
+      color: $third_color;
+      padding: 0.5rem 1rem;
+      border-radius: 0.4rem;
+      font: {
+        weight: 600;
+        size: 0.7rem;
+      }
+      letter-spacing: 0.1rem;
+      @include MediaQuery('md') {
+        font-size: 1rem;
+      }
+      &.active {
+        background-color: $third_color;
+
+        color: $main_color;
+        font: {
+          weight: bold;
+          size: 1.1rem;
+        }
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+  .projects_sections {
+    position: relative;
+    @extend %responsive_width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include MediaQuery('md') {
+      gap: 2%;
+    }
+    overflow: hidden;
+    flex-wrap: wrap;
+    padding: 1rem;
+    @include MediaQuery('lg') {
+      padding: 0;
+    }
+
+    .project {
+      position: relative;
+      z-index: 2;
+      &.disabled {
+        display: none;
+      }
+      &.active {
+        display: block;
+      }
+      &.animation {
+        animation: paddingAnimation 1s alternate ease-in-out;
+      }
+      width: 100%;
+      @include MediaQuery('md') {
+        width: 49%;
+        padding: 0;
+      }
+      height: 100%;
+      &.tall {
+        height: 25rem;
+      }
+      object-fit: cover;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      figure {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 20rem;
+        overflow: hidden;
+        object-fit: cover;
+        margin: 0;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 0.5rem;
+        }
+      }
+      .content {
+        position: absolute;
+        bottom: -100%;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          rgba(0, 0, 0, 0.1) 10%,
+          rgba(0, 0, 0, 0.78) 80%
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+        .text {
+          padding: 1rem;
+          color: white;
+          h3 {
+            @include MediaQuery('md') {
+              font: {
+                weight: bold;
+                size: 2.3rem;
+              }
+            }
+          }
+        }
+        p {
+          margin: 1rem auto;
+          @include MediaQuery('md') {
+            font: {
+              weight: 600;
+              size: 1rem;
+            }
+          }
+        }
+        .tech {
+          span {
+            margin: 0.3rem;
+            padding: 0.3rem 0.7rem;
+            background-color: $third_color;
+            border-radius: 3rem;
+            font: {
+              weight: bold;
+              size: 0.7rem;
+            }
+            @include MediaQuery('md') {
+              font: {
+                weight: bold;
+                size: 1rem;
+              }
+            }
+          }
+        }
+        transition: bottom 0.3s;
+      }
+      &:hover {
+        .content {
+          bottom: 0;
+        }
+      }
+    }
+  }
+  .intro_title {
+    position: fixed;
+    bottom: 5rem;
+    width: 100%;
+    color: $secondary_color;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    left: -45%;
+    transform: rotate(-90deg);
+    @include MediaQuery('md') {
+      top: -5rem;
+    }
+    h1 {
+      width: 100%;
+      font: {
+        family: 'Bodoni Moda', serif;
+        weight: 900;
+        size: 10rem;
+      }
+      opacity: 0.2;
+      @include MediaQuery('md') {
+        font-size: 12rem;
+      }
+    }
+  }
+  .see_project {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    &.active {
+      display: block;
+      .modal {
+        animation: changeWidth 0.4s forwards ease-in-out;
+      }
+    }
+    .backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: $third_color;
+      opacity: 0.3;
+      z-index: 3;
+      user-select: none;
+    }
+    .modal {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      min-height: 100dvh;
+      background-color: $main_color;
+      border: 1px solid $third_color;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      z-index: 3;
+      overflow-y: scroll;
+      @include MediaQuery('md') {
+        width: 30rem;
+      }
+      .content {
+        padding: 1rem;
+        @include MediaQuery('md') {
+          overflow-y: hidden;
+        }
+      }
+      .project_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      .project_desc {
+        font: {
+          weight: 700;
+          size: 0.8rem;
+        }
+        margin-bottom: 1rem;
+        color: $third_color;
+      }
+      .project_about {
+        @extend %see_project_handle_section;
+        p {
+          font: {
+            weight: 700;
+            size: 0.8rem;
+          }
+          color: $third_color;
+        }
+      }
+      .project_techs {
+        @extend %see_project_handle_section;
+        .techs {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        span {
+          background-color: $fourth_color;
+          padding: 0 1rem;
+          margin: 0 1rem 0.5rem 0;
+          border-radius: 0.2rem;
+        }
+      }
+      .website_url {
+        margin-top: 3rem;
+        .top {
+          display: flex;
+          align-items: center;
+          h3 {
+            margin: 0 0.4rem 0 0;
+          }
+          figure {
+            width: 1rem;
+            height: 1rem;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        a {
+          font: {
+            weight: bold;
+            size: 1rem;
+          }
+          color: black;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .github {
+        display: grid;
+        place-items: center;
+        background-color: black;
+        color: $main_color;
+        padding: 0.25rem;
+        width: 100%;
+        a {
+          text-decoration: none;
+        }
+        .git_content {
+          padding: 0.5rem 1rem;
+          border-radius: 0.3rem;
+          color: $third_color;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          figure {
+            width: 1rem;
+            height: 1rem;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      figure {
+        width: 100%;
+        height: 100%;
+        max-height: 20rem;
+        img {
+          border-radius: 0.2rem;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@keyframes paddingAnimation {
+  0% {
+    padding: 5rem 0 0;
+  }
+  100% {
+    padding: 0;
+  }
+}
+
+@keyframes changeWidth {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
