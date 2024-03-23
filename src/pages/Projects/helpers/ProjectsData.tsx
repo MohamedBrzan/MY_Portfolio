@@ -24,7 +24,7 @@ const ProjectsData = () => {
 
   const data: Project[] = [
     {
-      title: 'FaceX Website',
+      title: 'FaceX Website Very Soon.....',
       desc: 'Many designs websites here',
       about:
         'Flexible website template that can be used to create almost any kind of website imaginable',
