@@ -11,12 +11,22 @@ import { useEffect } from 'react';
 const About = () => {
   const experience = [
     {
-      title: 'Frontend Engineer',
+      title: 'Web Developer',
       image: code,
-      desc: 'As a frontend developer with two years of experience, I have developed a range of skills and knowledge in web development. I have worked with programming languages such as HTML, CSS, JavaScript moreover Bootstrap, Redux, Redux/toolkit and React.js to build modern, responsive, and cross-browser-compatible websites. I have also gained experience in creating new user-facing features, determining the structure and design of web pages, and building reusable codes. Additionally, I have learned to optimize page loading times and use a variety of markup languages to create web pages. I have developed excellent problem-solving skills and creativity, constantly seeking new ways to improve the user experience and solve technical challenges. I have also learned to work effectively as part of a team, collaborating with designers, developers, and other stakeholders to deliver high-quality web projects. Overall, my experience as a frontend developer has taught me the importance of staying up-to-date with industry trends, constantly learning new skills, and delivering value to clients and users through effective web development.',
+      desc: 'As a seasoned web developer, I specialize in building robust and user-friendly web applications. My toolkit includes a mix of front-end and back-end technologies, allowing me to create seamless experiences for users.',
+      date: {
+        from: '2022',
+        to: '',
+      },
+      url: { name: '', link: '' },
+    },
+    {
+      title: 'Frontend Developer',
+      image: code,
+      desc: 'As a frontend developer, I specialize in creating engaging and responsive user interfaces. My toolkit includes a mix of front-end technologies that allow me to build seamless web experiences.',
       date: {
         from: '2021',
-        to: '',
+        to: '2022',
       },
       url: { name: '', link: '' },
     },

@@ -79,6 +79,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
     @include MediaQuery('md') {
       gap: 2%;
     }
@@ -144,8 +145,9 @@
         border-radius: 0.5rem;
         .text {
           padding: 1rem;
-          color: white;
+          color: bisque;
           h3 {
+            -webkit-text-stroke: 1px #fff;
             @include MediaQuery('md') {
               font: {
                 weight: bold;
@@ -164,6 +166,8 @@
           }
         }
         .tech {
+          display: flex;
+          flex-wrap: wrap;
           span {
             margin: 0.3rem;
             padding: 0.3rem 0.7rem;
@@ -257,14 +261,15 @@
       align-items: flex-start;
       z-index: 3;
       overflow-y: scroll;
+      scrollbar-width: none;
       @include MediaQuery('md') {
         width: 30rem;
       }
       .content {
+        scrollbar-width: none;
         padding: 1rem;
-        @include MediaQuery('md') {
-          overflow-y: hidden;
-        }
+        overflow: auto;
+        height: 100%;
       }
       .project_title {
         display: flex;

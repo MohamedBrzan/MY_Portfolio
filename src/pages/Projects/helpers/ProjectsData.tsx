@@ -1,16 +1,19 @@
 import { useReducer } from 'react';
 import SeeProject from './SeeProject';
-import frontend1 from '/frontend_1.png';
-import frontend2 from '/frontend_2.png';
-import frontend3 from '/frontend_3.png';
-import frontend4 from '/frontend_4.png';
-import frontend5 from '/frontend_5.png';
-import frontend6 from '/frontend_6.png';
-import frontend7 from '/frontend_7.png';
-import frontend8 from '/frontend_8.png';
-import frontend9 from '/frontend_9.png';
-import frontend10 from '/frontend_10.png';
-import frontend11 from '/frontend_11.png';
+import frontend1 from '/frontend_1.webp';
+import frontend2 from '/frontend_2.webp';
+import frontend3 from '/frontend_3.webp';
+import frontend4 from '/frontend_4.webp';
+import frontend5 from '/frontend_5.webp';
+import frontend6 from '/frontend_6.webp';
+import frontend7 from '/frontend_7.webp';
+import frontend8 from '/frontend_8.webp';
+import frontend9 from '/frontend_9.webp';
+import frontend10 from '/frontend_10.webp';
+import frontend11 from '/frontend_11.webp';
+import aramTechImg from '/aram_tech.webp';
+import hippoImg from '/hippo.webp';
+import faceXImg from '/face_x.webp';
 import ShowProjectPage from '../../../Functions/ShowProjectPage';
 import Project from '../../../Ts/interfaces/Project';
 import reducer from '../../../store/reducer';
@@ -21,11 +24,80 @@ const ProjectsData = () => {
 
   const data: Project[] = [
     {
+      title: 'FaceX Website',
+      desc: 'Many designs websites here',
+      about:
+        'Flexible website template that can be used to create almost any kind of website imaginable',
+      category: ['frontend', 'backend'],
+      image: faceXImg,
+      techs: [
+        'HTML',
+        'CSS',
+        'Bootstrap',
+        'Javascript',
+        'typescript',
+        'react',
+        'next',
+        'node',
+        'express',
+        'mongodb',
+        'MUI',
+        'shadcn-ui',
+      ],
+      website: 'https://facex-front.onrender.com',
+      github: 'https://github.com/MohamedBrzan/FaceX_Frontend',
+    },
+    {
+      title: 'Hippo Digital Website',
+      desc: 'Many designs websites here',
+      about:
+        'Flexible website template that can be used to create almost any kind of website imaginable',
+      category: ['frontend', 'backend'],
+      image: hippoImg,
+      techs: [
+        'HTML',
+        'CSS',
+        'Bootstrap',
+        'Javascript',
+        'typescript',
+        'react',
+        'next',
+        'node',
+        'express',
+        'mongodb',
+        'MUI',
+        'shadcn-ui',
+      ],
+      website: 'https://hippoapp.onrender.com/',
+      github: 'https://github.com/MohamedBrzan/Hippo_Digital_App',
+    },
+    {
+      title: 'Aram Tech Website',
+      desc: 'Many designs websites here',
+      about:
+        'Flexible website template that can be used to create almost any kind of website imaginable',
+      category: ['frontend', 'backend'],
+      image: aramTechImg,
+      techs: [
+        'HTML',
+        'CSS',
+        'Bootstrap',
+        'Javascript',
+        'typescript',
+        'react',
+        'node',
+        'express',
+        'mongodb',
+      ],
+      website: 'https://mazeedsoft.onrender.com/',
+      github: 'https://github.com/MohamedBrzan/MazeedSoft',
+    },
+    {
       title: 'Multipurpose Website',
       desc: 'Many designs websites here',
       about:
         'Flexible website template that can be used to create almost any kind of website imaginable',
-      category: 'frontend',
+      category: ['frontend'],
       image: frontend1,
       techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
       website:
@@ -38,7 +110,7 @@ const ProjectsData = () => {
       desc: 'Online platform that showcases furniture products and allows customers to purchase them online.',
       about:
         'Online platform that showcases furniture products and allows customers to purchase them online.',
-      category: 'frontend',
+      category: ['frontend'],
       image: frontend2,
       techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
       website:
@@ -50,7 +122,7 @@ const ProjectsData = () => {
       desc: 'Online platform that showcases furniture products and allows customers to purchase them online.',
       about:
         'Online platform that showcases furniture products and allows customers to purchase them online.',
-      category: 'frontend',
+      category: ['frontend'],
       image: frontend3,
       techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
       website:
@@ -62,7 +134,7 @@ const ProjectsData = () => {
       desc: 'Ruby is an online platform that showcases jewelry products and allows customers to purchase them online.',
       about:
         'online platform that showcases jewelry products and allows customers to purchase them online.',
-      category: 'frontend',
+      category: ['frontend'],
       image: frontend4,
       techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
       website: 'https://mohamedbrzan.github.io/Ruby-Jewelry-Store-eCommerce/',
@@ -73,7 +145,7 @@ const ProjectsData = () => {
       desc: 'Stroyka Tools Store, improve your work now.',
       about:
         'A tools website is an online platform that provides tools and resources for various purposes.',
-      category: 'frontend',
+      category: ['frontend'],
       image: frontend5,
       techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
       website:
@@ -86,7 +158,7 @@ const ProjectsData = () => {
       desc: 'Many styles and designs for E-Commerce websites.',
       about:
         'Flexible website template that can be used to create almost any kind of website imaginable',
-      category: 'frontend',
+      category: ['frontend'],
       image: frontend6,
       techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
       website: 'https://mohamedbrzan.github.io/molla-eCommerce-html-template/',
@@ -97,7 +169,7 @@ const ProjectsData = () => {
       desc: "All what you need you'll find it here.",
       about:
         'An e-commerce website is an online platform that allows businesses to sell goods or services online and collect payment via an online payment system.',
-      category: 'frontend',
+      category: ['frontend'],
       image: frontend7,
       techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
       website:
@@ -109,7 +181,7 @@ const ProjectsData = () => {
       desc: 'this is Oxygen Company website to breath the life.',
       about:
         'A company website is an online platform that provides information about a business, its products or services, and its mission and values.',
-      category: 'frontend',
+      category: ['frontend'],
       image: frontend8,
       techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
       website: 'https://mohamedbrzan.github.io/Oxygen-Company/index.html',
@@ -120,7 +192,7 @@ const ProjectsData = () => {
       desc: 'you can make you company website now.',
       about:
         'A company website is an online platform that provides information about a business, its products or services, and its mission and values.',
-      category: 'frontend',
+      category: ['frontend'],
       image: frontend9,
       techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
       website: 'https://mohamedbrzan.github.io/The-Company/',
@@ -131,7 +203,7 @@ const ProjectsData = () => {
       desc: 'This is electronic E-commerce for all electronics you need.',
       about:
         'An e-commerce website is an online platform that allows businesses to sell goods or services online and collect payment via an online payment system.',
-      category: 'frontend',
+      category: ['frontend'],
       image: frontend10,
       techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
       website: 'https://mohamedbrzan.github.io/Lumpia-E-Commerce/',
@@ -142,7 +214,7 @@ const ProjectsData = () => {
       desc: 'All Pizzas special here, try it now.',
       about:
         'A pizza website is an online platform that showcases pizza products and allows customers to order them online.',
-      category: 'frontend',
+      category: ['frontend'],
       image: frontend11,
       techs: ['HTML', 'CSS', 'Bootstrap', 'JS', 'React.js'],
       website: 'https://mohamedbrzan.github.io/',
@@ -160,7 +232,7 @@ const ProjectsData = () => {
           <div
             className='project'
             key={index}
-            id={category}
+            id={category[0]}
             onClick={() =>
               ShowProjectPage({
                 dispatch,
@@ -176,7 +248,7 @@ const ProjectsData = () => {
             }
           >
             <figure>
-              <img src={image} alt={title} loading='lazy' />
+              <img src={image} alt={title} loading='eager' />
             </figure>
             <div className='content'>
               <div className='text'>

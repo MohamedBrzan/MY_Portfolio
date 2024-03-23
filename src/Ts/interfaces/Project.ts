@@ -6,7 +6,7 @@ interface Project {
   techs: string[];
   website: string;
   github: string;
-  category: string;
+  category: string | string[];
 }
 
 export default Project;

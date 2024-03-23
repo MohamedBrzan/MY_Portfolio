@@ -47,11 +47,11 @@ const Projects = () => {
         <h1>Projects.</h1>
       </div>
       <hr />
-      <ul className='tabs'>
+      {/* <ul className='tabs'>
         <li className='tab active' data-select='all'>
           All
         </li>
-        {/* <li className='tab' data-select='frontend'>
+        <li className='tab' data-select='frontend'>
           Frontend
         </li>
         <li className='tab' data-select='backend'>
@@ -62,8 +62,8 @@ const Projects = () => {
         </li>
         <li className='tab' data-select='ui-ux'>
           UI&UX
-        </li> */}
-      </ul>
+        </li>
+      </ul> */}
       <ProjectsData />
 
       <div className='intro_title'>

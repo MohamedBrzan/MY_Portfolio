@@ -28,7 +28,7 @@ const SeeProject = (props: Project) => {
           <p className='project_desc'>{desc}</p>
 
           <figure>
-            <img src={image} alt={title} loading='lazy' />
+            <img src={image} alt={title} loading='eager' />
           </figure>
           <div className='project_about'>
             <h3>About</h3>
