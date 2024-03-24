@@ -35,7 +35,7 @@ const Home = () => {
         <div className='bio'>
           <p>
             Meet Mohamed Mahmoud, a talented web developer with a passion for
-            creating beautiful and functional websites. With 2+ years of
+            creating beautiful and functional websites. With 3+ years of
             experience in the industry, <br /> I honed my skills in
             <div className='lang'>HTML/CSS</div>
             <div className='lang'>Bootstrap</div>
@@ -61,7 +61,7 @@ const Home = () => {
       </div>
       <hr />
 
-      <div className='social_links'>
+      {/* <div className='social_links'>
         {links.map(({ name, url, image }, index) => (
           <Link to={url} key={index}>
             <figure>
@@ -69,7 +69,7 @@ const Home = () => {
             </figure>
           </Link>
         ))}
-      </div>
+      </div> */}
       <div className='intro_title'>
         <h1>HELLO, There!</h1>
       </div>
