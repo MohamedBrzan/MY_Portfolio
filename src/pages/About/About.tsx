@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import book from '/book.svg';
-import shop from '/shop.svg';
+// import shop from '/shop.svg';
 import army from '/army.svg';
-import waiter from '/waiter.svg';
+// import waiter from '/waiter.svg';
 import code from '/code.svg';
 import deal from '/deal.svg';
 import './About.scss';
@@ -43,31 +43,10 @@ const About = () => {
     {
       title: 'Sales Representative',
       image: deal,
-      desc: 'As a sales representative with three years of experience, I have developed a range of skills and qualities that have helped me succeed in my role. I have learned to actively listen to customers, identify their pain points, and offer solutions that meet their needs',
-      date: {
-        from: '2017',
-        to: '2020',
-      },
-      url: { name: '', link: '' },
-    },
-    {
-      title: 'Waiter',
-      image: waiter,
-      desc: 'As a waiter with one year of experience, I have developed excellent customer service skills and the ability to work in a fast-paced environment. I have gained experience in taking orders, serving food and drinks, and handling payments. I have also learned to work effectively as part of a team, communicating with kitchen staff and other servers to ensure that orders are delivered accurately and efficiently.',
-      date: {
-        from: '2016',
-        to: '2017',
-      },
-      url: { name: '', link: '' },
-    },
-
-    {
-      title: 'Sales Man',
-      image: shop,
-      desc: 'As a salesperson with two years of experience, I have developed a unique mix of characteristics and skills that have helped me succeed in my role. I have learned to treat each prospective customer as an individual and adjust my message or selling technique to suit them.',
+      desc: 'As a sales representative with 6+ years of experience, I have developed a range of skills and qualities that have helped me succeed in my role. I have learned to actively listen to customers, identify their pain points, and offer solutions that meet their needs',
       date: {
         from: '2014',
-        to: '2016',
+        to: '2020',
       },
       url: { name: '', link: '' },
     },
