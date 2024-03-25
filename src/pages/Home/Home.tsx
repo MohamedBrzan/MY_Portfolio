@@ -1,29 +1,29 @@
-// import GitHub from '/github.svg';
-// import Linkedin from '/linkedin.svg';
-// import Whatsapp from '/whatsapp.svg';
-// import Gmail from '/gmail.svg';
-// import { Link } from 'react-router-dom';
+import GitHub from '/github.svg';
+import Linkedin from '/linkedin.svg';
+import Whatsapp from '/whatsapp.svg';
+import Gmail from '/gmail.svg';
+import { Link } from 'react-router-dom';
 import './Home.scss';
 
 const Home = () => {
-  // const links = [
-  //   { name: 'GitHub', url: 'https://github.com/MohamedBrzan', image: GitHub },
-  //   {
-  //     name: 'Linkedin',
-  //     url: 'https://www.linkedin.com/in/mohamed-brzan-01966518a/',
-  //     image: Linkedin,
-  //   },
-  //   {
-  //     name: 'Whatsapp',
-  //     url: 'whatsapp://send?abid=+201113772369',
-  //     image: Whatsapp,
-  //   },
-  //   {
-  //     name: 'Gmail',
-  //     url: 'mailto:mohamedbrzan.dev@gmail.com',
-  //     image: Gmail,
-  //   },
-  // ];
+  const links = [
+    { name: 'GitHub', url: 'https://github.com/MohamedBrzan', image: GitHub },
+    {
+      name: 'Linkedin',
+      url: 'https://www.linkedin.com/in/mohamed-brzan-01966518a/',
+      image: Linkedin,
+    },
+    {
+      name: 'Whatsapp',
+      url: 'whatsapp://send?abid=+201113772369',
+      image: Whatsapp,
+    },
+    {
+      name: 'Gmail',
+      url: 'mailto:mohamedbrzan.dev@gmail.com',
+      image: Gmail,
+    },
+  ];
 
   return (
     <section className='home'>
@@ -61,7 +61,7 @@ const Home = () => {
       </div>
       <hr />
 
-      {/* <div className='social_links'>
+      <div className='social_links'>
         {links.map(({ name, url, image }, index) => (
           <Link to={url} key={index}>
             <figure>
@@ -69,7 +69,7 @@ const Home = () => {
             </figure>
           </Link>
         ))}
-      </div> */}
+      </div>
       <div className='intro_title'>
         <h1>HELLO, There!</h1>
       </div>
