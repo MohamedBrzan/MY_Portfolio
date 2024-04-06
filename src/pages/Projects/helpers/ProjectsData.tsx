@@ -14,6 +14,7 @@ import frontend11 from '/frontend_11.webp';
 import aramTechImg from '/aram_tech.webp';
 import hippoImg from '/hippo.webp';
 import faceXImg from '/face_x.webp';
+import yoomImg from '/zoom.webp';
 import ShowProjectPage from '../../../Functions/ShowProjectPage';
 import Project from '../../../Ts/interfaces/Project';
 import reducer from '../../../store/reducer';
@@ -23,6 +24,28 @@ const ProjectsData = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const data: Project[] = [
+    {
+      title: 'YOOM Website Very Soon.....',
+      desc: 'Many designs websites here',
+      about:
+        'Flexible website template that can be used to create almost any kind of website imaginable',
+      category: ['frontend', 'backend'],
+      image: yoomImg,
+      techs: [
+        'HTML',
+        'CSS',
+        'Bootstrap',
+        'Javascript',
+        'typescript',
+        'react',
+        'next',
+        'node',
+        'MUI',
+        'shadcn-ui',
+      ],
+      website: 'soon....',
+      github: 'https://github.com/MohamedBrzan/video_chat_app',
+    },
     {
       title: 'FaceX Website Very Soon.....',
       desc: 'Many designs websites here',
