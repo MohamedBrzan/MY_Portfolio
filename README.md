@@ -17,7 +17,7 @@ Built with the React.js 18 App Router, TypeScript, RTK Query
 To get started with this project, run
 
 ```bash
-  git clone https://github.com/MohamedBrzan/My_Portfolio.git
+  git clone https://github.com/MohamedBrzan/MY_Portfolio.git
 ```
 
 ## License
