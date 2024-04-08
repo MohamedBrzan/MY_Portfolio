@@ -1,4 +1,4 @@
-# My Portfolio - A Modern Fullstack Website to show some of my works
+# My Portfolio - A Modern Fullstack Website
 
 Built with the React.js 18 App Router, TypeScript, RTK Query
 
