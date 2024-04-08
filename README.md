@@ -2,7 +2,7 @@
 
 Built with the React.js App Router, TypeScript, RTK Query
 
-![Project Image](<[/portfolio.webp](https://raw.githubusercontent.com/MohamedBrzan/MY_Portfolio/Master/public/portfolio.webp)>)
+![Project Image](https://github.com/MohamedBrzan/MY_Portfolio/blob/Master/public/portfolio.png)
 
 ## Features
 
