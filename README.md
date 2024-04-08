@@ -1,8 +1,8 @@
-# DigitalHippo - A Modern Fullstack E-Commerce Marketplace for Digital Products
+# My Portfolio - A Modern Fullstack Website to show some of my works
 
-Built with the Next.js 14 App Router, tRPC, TypeScript, Payload & Tailwind
+Built with the React.js App Router, TypeScript, RTK Query
 
-![Project Image](/portfolio.webp)
+![Project Image](<[/portfolio.webp](https://raw.githubusercontent.com/MohamedBrzan/MY_Portfolio/Master/public/portfolio.webp)>)
 
 ## Features
 
