@@ -1,6 +1,6 @@
 # [My Portfolio - A Modern Fullstack Website](https://portfolio-becv.onrender.com/)
 
-Built with the React.js 18 App Router, TypeScript, RTK Query
+Built with the React.js 18 App Router, TypeScript, Sass, Bootstrap, Vite
 
 ![Project Image](https://github.com/MohamedBrzan/MY_Portfolio/blob/Master/public/portfolio.png)
 
