@@ -1,4 +1,4 @@
-# [My Portfolio - A Modern Fullstack Website](<[readme.com](https://portfolio-becv.onrender.com/)>)
+# [My Portfolio - A Modern Fullstack Website](https://portfolio-becv.onrender.com/)
 
 Built with the React.js 18 App Router, TypeScript, RTK Query
 
