@@ -136,7 +136,7 @@
         height: 100%;
         background: linear-gradient(
           rgba(0, 0, 0, 0.1) 10%,
-          rgba(0, 0, 0, 0.78) 80%
+          rgba(0, 0, 0, 0.8) 80%
         );
         display: flex;
         flex-direction: column;
@@ -145,9 +145,9 @@
         border-radius: 0.5rem;
         .text {
           padding: 1rem;
-          color: bisque;
+          color: #fff;
           h3 {
-            -webkit-text-stroke: 1px #fff;
+            -webkit-text-stroke: 0.3px #000;
             @include MediaQuery('md') {
               font: {
                 weight: bold;
@@ -171,7 +171,8 @@
           span {
             margin: 0.3rem;
             padding: 0.3rem 0.7rem;
-            background-color: $third_color;
+            background-color: bisque;
+            color: #000;
             border-radius: 3rem;
             font: {
               weight: bold;

@@ -25,7 +25,7 @@ const ProjectsData = () => {
 
   const data: Project[] = [
     {
-      title: 'YOOM Website Very Soon.....',
+      title: 'YOOM Video Chat',
       desc: 'Many designs websites here',
       about:
         'Flexible website template that can be used to create almost any kind of website imaginable',
@@ -43,7 +43,7 @@ const ProjectsData = () => {
         'MUI',
         'shadcn-ui',
       ],
-      website: 'soon....',
+      website: 'https://yoom-today.vercel.app',
       github: 'https://github.com/MohamedBrzan/video_chat_app',
     },
     {
