@@ -42,6 +42,8 @@ const ProjectsData = () => {
         'node',
         'MUI',
         'shadcn-ui',
+        'stream',
+        'clerk',
       ],
       website: 'https://yoom-today.vercel.app',
       github: 'https://github.com/MohamedBrzan/video_chat_app',
