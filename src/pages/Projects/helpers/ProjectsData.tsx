@@ -11,6 +11,7 @@ import frontend8 from '/frontend_8.webp';
 import frontend9 from '/frontend_9.webp';
 import frontend10 from '/frontend_10.webp';
 import frontend11 from '/frontend_11.webp';
+import highPointImg from '/high_point.webp';
 import aramTechImg from '/aram_tech.webp';
 import hippoImg from '/hippo.webp';
 import faceXImg from '/face_x.webp';
@@ -95,6 +96,27 @@ const ProjectsData = () => {
       ],
       website: 'https://hippoapp.onrender.com/',
       github: 'https://github.com/MohamedBrzan/Hippo_Digital_App',
+    },
+    {
+      title: 'High Point Company Website',
+      desc: `High Point it's a tech solutions company for solving a tech problems`,
+      about:
+        'Flexible website template that can be used to create almost any kind of website imaginable',
+      category: ['frontend', 'backend'],
+      image: highPointImg,
+      techs: [
+        'HTML',
+        'CSS',
+        'Bootstrap',
+        'Sass',
+        'Javascript',
+        'react',
+        'node',
+        'express',
+        'mongodb',
+      ],
+      website: 'https://hp-tech.com/',
+      github: 'https://github.com/MohamedBrzan/high-point-frontend',
     },
     {
       title: 'Aram Tech Website',
