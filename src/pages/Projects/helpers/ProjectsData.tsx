@@ -114,6 +114,7 @@ const ProjectsData = () => {
 				'next',
 				'typescript',
 				'prismic CMS',
+				'gsap',
 			],
 			website: 'https://prismic-lp.vercel.app/',
 			github: 'https://github.com/MohamedBrzan/prismic_LP',
