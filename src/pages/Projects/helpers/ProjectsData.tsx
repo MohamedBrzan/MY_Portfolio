@@ -47,11 +47,12 @@ const ProjectsData = () => {
 				'stream',
 				'clerk',
 			],
+			released: true,
 			website: 'https://yoom-today.vercel.app',
 			github: 'https://github.com/MohamedBrzan/video_chat_app',
 		},
 		{
-			title: 'FaceX Website Very Soon.....',
+			title: 'Social Media FacX Web App',
 			desc: 'Many designs websites here',
 			about:
 				'Flexible website template that can be used to create almost any kind of website imaginable',
@@ -71,6 +72,7 @@ const ProjectsData = () => {
 				'MUI',
 				'shadcn-ui',
 			],
+			released: false,
 			website: 'https://facex-front.onrender.com',
 			github: 'https://github.com/MohamedBrzan/FaceX_Frontend',
 		},
@@ -95,6 +97,7 @@ const ProjectsData = () => {
 				'MUI',
 				'shadcn-ui',
 			],
+			released: true,
 			website: 'https://hippoapp.onrender.com/',
 			github: 'https://github.com/MohamedBrzan/Hippo_Digital_App',
 		},
@@ -116,6 +119,7 @@ const ProjectsData = () => {
 				'prismic CMS',
 				'gsap',
 			],
+			released: true,
 			website: 'https://prismic-lp.vercel.app/',
 			github: 'https://github.com/MohamedBrzan/prismic_LP',
 		},
@@ -137,6 +141,7 @@ const ProjectsData = () => {
 				'express',
 				'mongodb',
 			],
+			released: true,
 			website: 'https://hp-tech.com/',
 			github: 'https://github.com/MohamedBrzan/high-point-frontend',
 		},
@@ -158,6 +163,7 @@ const ProjectsData = () => {
 				'express',
 				'mongodb',
 			],
+			released: true,
 			website: 'https://mazeedsoft.onrender.com/',
 			github: 'https://github.com/MohamedBrzan/MazeedSoft',
 		},
@@ -169,6 +175,7 @@ const ProjectsData = () => {
 			category: ['frontend'],
 			image: frontend1,
 			techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
+			released: true,
 			website:
 				'https://mohamedbrzan.github.io/multipurpose-bootstrap-template/',
 			github:
@@ -182,6 +189,7 @@ const ProjectsData = () => {
 			category: ['frontend'],
 			image: frontend2,
 			techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
+			released: true,
 			website:
 				'https://mohamedbrzan.github.io/Flourish-eCommerce-Template/index-2.html',
 			github: 'https://github.com/MohamedBrzan/Flourish-eCommerce-Template',
@@ -194,6 +202,7 @@ const ProjectsData = () => {
 			category: ['frontend'],
 			image: frontend3,
 			techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
+			released: true,
 			website:
 				'https://mohamedbrzan.github.io/Furnitica-Minimalist-Furniture/index-2.html',
 			github: 'https://github.com/MohamedBrzan/Furnitica-Minimalist-Furniture',
@@ -206,6 +215,7 @@ const ProjectsData = () => {
 			category: ['frontend'],
 			image: frontend4,
 			techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
+			released: true,
 			website: 'https://mohamedbrzan.github.io/Ruby-Jewelry-Store-eCommerce/',
 			github: 'https://github.com/MohamedBrzan/Ruby-Jewelry-Store-eCommerce',
 		},
@@ -217,6 +227,7 @@ const ProjectsData = () => {
 			category: ['frontend'],
 			image: frontend5,
 			techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
+			released: true,
 			website:
 				'https://mohamedbrzan.github.io/Stroyka-Tools-Store-HTML-Template/',
 			github:
@@ -230,21 +241,23 @@ const ProjectsData = () => {
 			category: ['frontend'],
 			image: frontend6,
 			techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
+			released: true,
 			website: 'https://mohamedbrzan.github.io/molla-eCommerce-html-template/',
 			github: 'https://github.com/MohamedBrzan/molla-eCommerce-html-template',
 		},
-		{
-			title: 'E-CommerCe',
-			desc: "All what you need you'll find it here.",
-			about:
-				'An e-commerce website is an online platform that allows businesses to sell goods or services online and collect payment via an online payment system.',
-			category: ['frontend'],
-			image: frontend7,
-			techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
-			website:
-				'https://mohamedbrzan.github.io/E-CommerCe/?flexRadioDefault=on#',
-			github: 'https://github.com/MohamedBrzan/E-CommerCe',
-		},
+		// {
+		// 	title: 'E-CommerCe',
+		// 	desc: "All what you need you'll find it here.",
+		// 	about:
+		// 		'An e-commerce website is an online platform that allows businesses to sell goods or services online and collect payment via an online payment system.',
+		// 	category: ['frontend'],
+		// 	image: frontend7,
+		// 	techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
+		// 	released: true,
+		// 	website:
+		// 		'https://mohamedbrzan.github.io/E-CommerCe/?flexRadioDefault=on#',
+		// 	github: 'https://github.com/MohamedBrzan/E-CommerCe',
+		// },
 		{
 			title: 'Oxygen Company',
 			desc: 'this is Oxygen Company website to breath the life.',
@@ -253,20 +266,22 @@ const ProjectsData = () => {
 			category: ['frontend'],
 			image: frontend8,
 			techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
+			released: true,
 			website: 'https://mohamedbrzan.github.io/Oxygen-Company/index.html',
 			github: 'https://github.com/MohamedBrzan/Oxygen-Company',
 		},
-		{
-			title: 'The Company',
-			desc: 'you can make you company website now.',
-			about:
-				'A company website is an online platform that provides information about a business, its products or services, and its mission and values.',
-			category: ['frontend'],
-			image: frontend9,
-			techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
-			website: 'https://mohamedbrzan.github.io/The-Company/',
-			github: 'https://github.com/MohamedBrzan/The-Company',
-		},
+		// {
+		// 	title: 'The Company',
+		// 	desc: 'you can make you company website now.',
+		// 	about:
+		// 		'A company website is an online platform that provides information about a business, its products or services, and its mission and values.',
+		// 	category: ['frontend'],
+		// 	image: frontend9,
+		// 	techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
+		// 	released: true,
+		// 	website: 'https://mohamedbrzan.github.io/The-Company/',
+		// 	github: 'https://github.com/MohamedBrzan/The-Company',
+		// },
 		{
 			title: 'Lumpia E-Commerce',
 			desc: 'This is electronic E-commerce for all electronics you need.',
@@ -275,27 +290,39 @@ const ProjectsData = () => {
 			category: ['frontend'],
 			image: frontend10,
 			techs: ['HTML', 'CSS', 'Bootstrap', 'JS'],
+			released: true,
 			website: 'https://mohamedbrzan.github.io/Lumpia-E-Commerce/',
 			github: 'https://github.com/MohamedBrzan/The-Company',
 		},
-		{
-			title: 'Pizza Restaurant',
-			desc: 'All Pizzas special here, try it now.',
-			about:
-				'A pizza website is an online platform that showcases pizza products and allows customers to order them online.',
-			category: ['frontend'],
-			image: frontend11,
-			techs: ['HTML', 'CSS', 'Bootstrap', 'JS', 'React.js'],
-			website: 'https://mohamedbrzan.github.io/',
-			github: 'https://github.com/MohamedBrzan/MohamedBrzan.github.io',
-		},
+		// {
+		// 	title: 'Pizza Restaurant',
+		// 	desc: 'All Pizzas special here, try it now.',
+		// 	about:
+		// 		'A pizza website is an online platform that showcases pizza products and allows customers to order them online.',
+		// 	category: ['frontend'],
+		// 	image: frontend11,
+		// 	techs: ['HTML', 'CSS', 'Bootstrap', 'JS', 'React.js'],
+		// 	released: true,
+		// 	website: 'https://mohamedbrzan.github.io/',
+		// 	github: 'https://github.com/MohamedBrzan/MohamedBrzan.github.io',
+		// },
 	];
 
 	return (
 		<section className='projects_sections'>
 			{data.map(
 				(
-					{ title, desc, image, about, category, techs, website, github },
+					{
+						released,
+						title,
+						desc,
+						image,
+						about,
+						category,
+						techs,
+						website,
+						github,
+					},
 					index,
 				) => (
 					<div
@@ -330,6 +357,11 @@ const ProjectsData = () => {
 								</div>
 							</div>
 						</div>
+						{!released && (
+							<div className='soon'>
+								<strong>coming soon</strong>
+							</div>
+						)}
 					</div>
 				),
 			)}
