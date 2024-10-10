@@ -25,6 +25,8 @@ const Home = () => {
     },
   ];
 
+  const langs = ['HTML/CSS', 'Bootstrap', 'Sass', 'MUI' , 'Shadcn-UI', 'JavaScript', 'TypeScript', 'React', 'Next', 'Angular', 'Node', 'Express', 'MongoDB', 'Websocket', 'Jest', 'Git']
+
   return (
     <section className='home'>
       <div className='intro_text'>
@@ -37,23 +39,11 @@ const Home = () => {
             Meet Mohamed Mahmoud, a talented web developer with a passion for
             creating beautiful and functional websites. With 3+ years of
             experience in the industry, <br /> I honed my skills in
-            <div className='lang'>HTML/CSS</div>
-            <div className='lang'>Bootstrap</div>
-            <div className='lang'>Sass</div>
-            <div className='lang'>MUI</div>
-            <div className='lang'>Shadcn-UI</div>
-            <div className='lang'>JavaScript</div>
-            <div className='lang'>TypeScript</div>
-            <div className='lang'>React</div>
-            <div className='lang'>next</div>
-            <div className='lang'>Node</div>
-            <div className='lang'>Express</div>
-            <div className='lang'>MongoDB</div>
-            <div className='lang'>Websocket</div>
-            <div className='lang'>Jest</div>
-            <div className='lang'>Git</div>
+            {langs.map((lang, i) => (
+              <div className='lang' key={i}>{lang}</div>
+            ))}
             , and other web technologies.
-            <br /> Their portfolio showcases a range of projects, from simple
+            <br /> My portfolio showcases a range of projects, from simple
             landing pages to complex web applications, all designed with a keen
             eye for detail and user experience.
           </p>
