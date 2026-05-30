@@ -2,8 +2,8 @@ import GitHub from '/github.svg';
 import Linkedin from '/linkedin.svg';
 import Whatsapp from '/whatsapp.svg';
 import Gmail from '/gmail.svg';
-import { Link } from 'react-router-dom';
 import './Home.scss';
+import SEO from '../../Components/SEO';
 
 const Home = () => {
   const links = [
@@ -15,7 +15,7 @@ const Home = () => {
     },
     {
       name: 'Whatsapp',
-      url: 'whatsapp://send?abid=+201113772369',
+      url: 'https://wa.me/201113772369',
       image: Whatsapp,
     },
     {
@@ -25,43 +25,67 @@ const Home = () => {
     },
   ];
 
-  const langs = ['HTML/CSS', 'Bootstrap', 'Sass', 'MUI' , 'Shadcn-UI', 'JavaScript', 'TypeScript', 'React', 'Next', 'Angular', 'Node', 'Express', 'MongoDB', 'Websocket', 'Jest', 'Git']
+  const langs = [
+    'HTML/CSS',
+    'Bootstrap',
+    'Sass',
+    'MUI',
+    'Shadcn-UI',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Next',
+    'Angular',
+    'Node',
+    'Express',
+    'MongoDB',
+    'Websocket',
+    'Jest',
+    'Git',
+  ];
 
   return (
-    <section className='home'>
-      <div className='intro_text'>
-        <div className='name'>
-          {/* <h1 className='glitch' >I'm Mohamed Mahmoud Brzan</h1> */}
-          <h1 className='glitch'>I'm Mohmaed</h1>
+    <section className="home">
+      <SEO title="Mohamed Mahmoud — Full Stack Developer" />
+      <div className="intro_text">
+        <div className="name">
+          <h1 className="glitch">I'm Mohamed</h1>
         </div>
-        <div className='bio'>
+        <div className="bio">
           <p>
-            Meet Mohamed Mahmoud, a talented web developer with a passion for
-            creating beautiful and functional websites. With 3+ years of
-            experience in the industry, <br /> I honed my skills in
+            Meet Mohamed Mahmoud, a talented web developer with a passion for creating beautiful and
+            functional websites. With 3+ years of experience in the industry, <br /> I honed my
+            skills in
             {langs.map((lang, i) => (
-              <div className='lang' key={i}>{lang}</div>
+              <span className="lang" key={i}>
+                {lang}
+              </span>
             ))}
             , and other web technologies.
-            <br /> My portfolio showcases a range of projects, from simple
-            landing pages to complex web applications, all designed with a keen
-            eye for detail and user experience.
+            <br /> My portfolio showcases a range of projects, from simple landing pages to complex
+            web applications, all designed with a keen eye for detail and user experience.
           </p>
         </div>
       </div>
       <hr />
 
-      <div className='social_links'>
+      <div className="social_links">
         {links.map(({ name, url, image }, index) => (
-          <Link to={url} key={index}>
+          <a
+            href={url}
+            key={index}
+            {...(!url.startsWith('mailto:') && { target: '_blank' })}
+            rel="noopener noreferrer"
+            aria-label={name}
+          >
             <figure>
-              <img src={image} alt={name} />
+              <img src={image} alt="" />
             </figure>
-          </Link>
+          </a>
         ))}
       </div>
-      <div className='intro_title'>
-        <h1>HELLO, There!</h1>
+      <div className="intro_title" aria-hidden="true">
+        <p>HELLO, There!</p>
       </div>
     </section>
   );

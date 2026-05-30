@@ -1,37 +1,36 @@
-import { useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useCursor } from '../../../contexts/CursorContext';
 
-const HeadLinks = () => {
-  const ulRef = useRef(document.createElement('ul'));
+interface HeadLinksProps {
+  onNavigate?: () => void;
+}
 
-  useEffect(() => {
-    ulRef.current.addEventListener('mouseover', () => {
-      document.getElementById('inner_cursor')?.classList.add('open');
-      document.getElementById('outer_cursor')?.classList.add('open');
-    });
-    ulRef.current.addEventListener('mouseleave', () => {
-      document.getElementById('inner_cursor')?.classList.remove('open');
-      document.getElementById('outer_cursor')?.classList.remove('open');
-    });
-  }, []);
+const HeadLinks = ({ onNavigate }: HeadLinksProps) => {
+  const { setOpen } = useCursor();
 
   return (
-    <nav className='head_links'>
-      <ul ref={ulRef}>
+    <nav className="head_links" aria-label="Main navigation">
+      <ul onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
         <li>
-          <NavLink to='/about' className=''>
+          <NavLink to="/about" onClick={onNavigate}>
             About
           </NavLink>
         </li>
         <li>
-          <NavLink to='/projects'>projects</NavLink>
+          <NavLink to="/projects" onClick={onNavigate}>
+            projects
+          </NavLink>
         </li>
-        {/* <li>
-          <NavLink to='/resume'>Resume</NavLink>
-        </li> */}
-        {/* <li>
-          <NavLink to='/contact'>Contact</NavLink>
-        </li> */}
+        <li>
+          <NavLink to="/resume" onClick={onNavigate}>
+            Resume
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" onClick={onNavigate}>
+            Contact
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

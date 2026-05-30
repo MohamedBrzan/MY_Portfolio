@@ -1,140 +1,345 @@
+@use 'sass:color';
 @use '../../Scss/Variables' as *;
 @use '../../Scss/Mixins' as *;
 @use '../../Scss/ClassNames' as *;
 
-%responsive_width {
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  @include MediaQuery('md') {
-    width: 60rem;
-  }
+.contact {
+	position: relative;
+	padding-bottom: 4rem;
+	hr {
+		opacity: 0.3;
+	}
+	.title {
+		@extend %responsive_width;
+		padding: 2rem 0 1rem;
+		h1 {
+			font: {
+				weight: bold;
+				size: 4rem;
+			}
+		}
+	}
+	.contact_layout {
+		@extend %responsive_width;
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		z-index: 2;
+		position: relative;
+		@include MediaQuery('md') {
+			flex-direction: row;
+			align-items: flex-start;
+			padding: 2rem 0;
+		}
+	}
+	.contact_info {
+		flex: 0 0 auto;
+		@include MediaQuery('md') {
+			width: 40%;
+			padding-right: 2rem;
+		}
+	}
+	.contact_intro {
+		font: {
+			weight: 500;
+			size: 1.1rem;
+		}
+		color: $third_color;
+		line-height: 1.7;
+		margin-bottom: 1.5rem;
+	}
+	.contact_email {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 1.5rem;
+		.email_icon {
+			font-size: 1.2rem;
+		}
+		a {
+			font: {
+				weight: bold;
+				size: 1rem;
+			}
+			text-decoration: none;
+			color: black;
+			border-bottom: 1px solid $secondary_color;
+			transition: border-color 0.2s;
+			&:hover {
+				border-color: $third_color;
+			}
+		}
+	}
+	.contact_socials {
+		display: flex;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+		a {
+			font: {
+				weight: 600;
+				size: 0.9rem;
+			}
+			text-decoration: none;
+			color: $secondary_color;
+			text-transform: uppercase;
+			letter-spacing: 0.05rem;
+			transition: color 0.2s;
+			&:hover {
+				color: $third_color;
+			}
+		}
+	}
+	.contact_form_wrapper {
+		flex: 1;
+		@include MediaQuery('md') {
+			width: 60%;
+		}
+	}
+	form {
+		.form_group {
+			margin-bottom: 1.5rem;
+			display: flex;
+			flex-direction: column;
+			label {
+				font: {
+					weight: 600;
+					size: 0.75rem;
+				}
+				text-transform: uppercase;
+				letter-spacing: 0.1rem;
+				color: $secondary_color;
+				margin-bottom: 0.5rem;
+				transition: color 0.2s ease;
+			}
+			input,
+			textarea {
+				padding: 0.875rem 1rem;
+				width: 100%;
+				border-radius: 0.3rem;
+				border: 1.5px solid $secondary_color;
+				background: transparent;
+				outline: none;
+				font: {
+					family: 'Rajdhani', sans-serif;
+					weight: 500;
+					size: 1rem;
+				}
+				transition: border-color 0.3s ease, box-shadow 0.3s ease;
+				&:focus {
+					border-color: $third_color;
+					box-shadow: 0 0 0 3px rgba($third_color, 0.08);
+				}
+			}
+			textarea {
+				resize: vertical;
+				min-height: 8rem;
+			}
+			&:focus-within label {
+				color: $third_color;
+			}
+			.error_text {
+				font-size: 0.8rem;
+				color: #c0392b;
+				margin-top: 0.35rem;
+				animation: slideDown 0.2s ease;
+			}
+			&.error {
+				input,
+				textarea {
+					border-color: #c0392b;
+					&:focus {
+						box-shadow: 0 0 0 3px rgba(#c0392b, 0.08);
+					}
+				}
+				label {
+					color: #c0392b;
+				}
+			}
+			&.valid {
+				input,
+				textarea {
+					border-color: #27ae60;
+				}
+				label {
+					color: #27ae60;
+				}
+			}
+		}
+		.error_message {
+			text-align: center;
+			font-size: 0.95rem;
+			padding: 0.75rem;
+			margin-bottom: 1rem;
+			color: #fff;
+			background-color: #c0392b;
+			border-radius: 0.3rem;
+		}
+		button.btn {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+			background-color: $third_color;
+			padding: 1rem 2rem;
+			border-radius: 0.4rem;
+			border: 2px solid $third_color;
+			color: $main_color;
+			font: {
+				weight: 600;
+				size: 1rem;
+			}
+			transition: background-color 0.3s, color 0.3s;
+			&:hover:not(:disabled) {
+				background-color: transparent;
+				color: $third_color;
+			}
+			&:disabled {
+				opacity: 0.5;
+				cursor: not-allowed;
+			}
+		}
+	}
+	.spinner {
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		border-top-color: #fff;
+		border-radius: 50%;
+		animation: spin 0.6s linear infinite;
+	}
+	.success_state {
+		text-align: center;
+		padding: 3rem 1rem;
+		animation: fadeIn 0.4s ease;
+		.success_icon {
+			width: 4rem;
+			height: 4rem;
+			margin: 0 auto 1.5rem;
+			background-color: #27ae60;
+			color: #fff;
+			font-size: 2rem;
+			line-height: 4rem;
+			border-radius: 50%;
+		}
+		h2 {
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin-bottom: 0.5rem;
+		}
+		p {
+			color: $secondary_color;
+			margin-bottom: 2rem;
+		}
+	}
+	.form_fallback {
+		text-align: center;
+		padding: 3rem 1.5rem;
+		border: 1.5px dashed $secondary_color;
+		border-radius: 0.5rem;
+		animation: fadeIn 0.4s ease;
+		.fallback_icon {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+		h2 {
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin-bottom: 0.5rem;
+		}
+		p {
+			color: $secondary_color;
+			margin-bottom: 1.5rem;
+			font-size: 1rem;
+		}
+		.fallback_btn {
+			display: inline-block;
+			padding: 0.875rem 2rem;
+			background-color: $third_color;
+			color: $main_color;
+			text-decoration: none;
+			border-radius: 0.4rem;
+			font: {
+				weight: 600;
+				size: 1rem;
+			}
+			transition: background-color 0.3s;
+			&:hover {
+				background-color: color.adjust($third_color, $lightness: 10%);
+			}
+		}
+	}
+	.btn_outline {
+		background: transparent;
+		color: $third_color;
+		border: 2px solid $third_color;
+		padding: 0.75rem 2rem;
+		border-radius: 0.4rem;
+		font: {
+			weight: 600;
+			size: 0.95rem;
+		}
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
+		&:hover {
+			background-color: $third_color;
+			color: $main_color;
+		}
+	}
+	.intro_title {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		color: $secondary_color;
+		overflow: hidden;
+		display: flex;
+		flex-wrap: nowrap;
+		pointer-events: none;
+		p {
+			width: 100%;
+			font: {
+				family: 'Bodoni Moda', serif;
+				weight: 900;
+				size: 6rem;
+			}
+			opacity: 0.2;
+			@include MediaQuery('md') {
+				font-size: 8rem;
+			}
+			@include MediaQuery('lg') {
+				font-size: 20rem;
+				letter-spacing: 4rem;
+			}
+		}
+	}
 }
 
-.contact {
-  position: relative;
-  max-height: 100vh;
-  overflow: hidden;
-  hr {
-    opacity: 0.3;
-  }
-  .title {
-    @extend %responsive_width;
-    padding: 2rem 0 1rem;
-    h1 {
-      font: {
-        weight: bold;
-        size: 4rem;
-      }
-    }
-  }
-  .email_contact {
-    @extend %responsive_width;
-    padding: 1rem;
-    @include MediaQuery('md') {
-      padding: 2rem 0;
-    }
-    font: {
-      weight: 500;
-      size: 1rem;
-    }
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
 
-    a {
-      font: {
-        weight: bold;
-        size: 1.1rem;
-      }
-      text-decoration: none;
-      color: black;
-    }
-  }
-  .thanks_message {
-    text-align: center;
-    font-size: 1.5rem;
-    @include MediaQuery('md') {
-      font-size: 1rem;
-    }
-    padding: 1rem;
-    color: $fourth_color;
-    background-color: $secondary_color;
-    display: none;
-    &.active {
-      display: block;
-    }
-  }
-  form {
-    position: relative;
-    @extend %responsive_width;
-    padding: 1rem;
-    z-index: 2;
-    .form_group {
-      margin: 1rem auto;
-      input,
-      textarea {
-        padding: 1rem;
-        width: 100%;
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
-        border-radius: 0.3rem;
-        border: 1px solid $secondary_color;
-        @include MediaQuery('md') {
-          width: 50%;
-        }
-      }
-      input {
-        font: {
-          weight: bold;
-          size: 1.1rem;
-        }
-      }
-      textarea {
-        font: {
-          weight: 500;
-          size: 1rem;
-        }
-      }
-    }
-    button.btn {
-      background-color: black;
-      padding: 1rem 3rem;
-      border-radius: 0.4rem;
-      color: white;
-      font: {
-        weight: 600;
-        size: 1.1rem;
-      }
-      transition: background-color 0.3s, color 0.5s;
-      &:hover {
-        background-color: transparent;
-        color: black;
-      }
-    }
-  }
-  ::placeholder {
-    font-size: 1.2rem;
-  }
-  .intro_title {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: $secondary_color;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: nowrap;
-    h1 {
-      width: 100%;
-      font: {
-        family: 'Bodoni Moda', serif;
-        weight: 900;
-        size: 6rem;
-      }
-      opacity: 0.2;
-      @include MediaQuery('md') {
-        font-size: 8rem;
-      }
-      @include MediaQuery('lg') {
-        font-size: 20rem;
-        letter-spacing: 4rem;
-      }
-    }
-  }
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-4px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

@@ -1,12 +1,14 @@
-import { Link } from 'react-router-dom';
 import book from '/book.svg';
 import code from '/code.svg';
 import './About.scss';
-import { useEffect } from 'react';
+import { useCursor } from '../../contexts/CursorContext';
+import SEO from '../../Components/SEO';
 
 const About = () => {
+  const { setOpen } = useCursor();
+
   const experience = [
-      {
+    {
       title: 'Software Engineer ( Full Stack )',
       image: code,
       desc: `As a Full Stack Software Engineer,
@@ -43,26 +45,6 @@ const About = () => {
       },
       url: { name: '', link: '' },
     },
-    // {
-    //   title: 'Army Service',
-    //   image: army,
-    //   desc: 'In Egypt, military service is mandatory for males between the ages of 18 and 30 for one to three years, depending on their education. As an individual who joined the Egypt army for one year, I underwent basic training and specialized training, which included physical fitness, weapons training, and tactical skills. During my service, I gained valuable experience in leadership, teamwork, and discipline, which have helped me in my personal and professional life. I also had the opportunity to serve my country and contribute to its security and stability. Although military service can be challenging, it is a valuable experience that can help individuals develop important skills and qualities.',
-    //   date: {
-    //     from: '2020',
-    //     to: '2021',
-    //   },
-    //   url: { name: '', link: '' },
-    // },
-    // {
-    //   title: 'Sales Representative',
-    //   image: deal,
-    //   desc: 'As a sales representative with 6+ years of experience, I have developed a range of skills and qualities that have helped me succeed in my role. I have learned to actively listen to customers, identify their pain points, and offer solutions that meet their needs',
-    //   date: {
-    //     from: '2014',
-    //     to: '2020',
-    //   },
-    //   url: { name: '', link: '' },
-    // },
   ];
 
   const read = [
@@ -78,44 +60,40 @@ const About = () => {
     },
   ];
 
-  useEffect(() => {
-    document.querySelectorAll('section.about .work_data a').forEach((link) => {
-      link.addEventListener('mouseover', () => {
-        document.getElementById('inner_cursor')?.classList.add('open');
-      });
-      link.addEventListener('mouseleave', () => {
-        document.getElementById('inner_cursor')?.classList.remove('open');
-      });
-    });
-  }, []);
-
   return (
-    <section className='about'>
-      <div className='title about_me'>
+    <section className="about">
+      <SEO title="Experience — Mohamed Mahmoud" />
+      <div className="title about_me">
         <h1>Experience.</h1>
       </div>
       <hr />
 
-      <div className='work_data'>
+      <div className="work_data">
         {experience.map(({ title, date, image, desc, url }, index) => (
-          <div key={index} className='work_brief'>
-            <div className='position'>
-              <div className='top_sec'>
-                <div className='title'>
+          <div key={index} className="work_brief">
+            <div className="position">
+              <div className="top_sec">
+                <div className="title">
                   <h2>{title}</h2>
                   <figure>
                     <img src={image} alt={title} />
                   </figure>
                 </div>
-                <Link to={url.link}> {url.name}</Link>
+                {url.link && (
+                  <a
+                    href={url.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onMouseEnter={() => setOpen(true)}
+                    onMouseLeave={() => setOpen(false)}
+                  >
+                    {url.name}
+                  </a>
+                )}
               </div>
               <p>
                 <strong>
-                  <small>
-                    {date.from && !date.to
-                      ? date.from
-                      : date.from + ' - ' + date.to}
-                  </small>
+                  <small>{date.from && !date.to ? date.from : date.from + ' - ' + date.to}</small>
                 </strong>
               </p>
               <p>{desc}</p>
@@ -124,22 +102,32 @@ const About = () => {
           </div>
         ))}
       </div>
-      <div className='title read'>
-        <h1>Read.</h1>
+      <div className="title read">
+        <h2>Read.</h2>
       </div>
 
-      <div className='work_data read'>
+      <div className="work_data read">
         {read.map(({ title, image, desc, url }, index) => (
-          <div key={index} className='work_brief'>
-            <div className='position'>
-              <div className='top_sec'>
-                <div className='title'>
-                  <h2>{title}</h2>
+          <div key={index} className="work_brief">
+            <div className="position">
+              <div className="top_sec">
+                <div className="title">
+                  <h3>{title}</h3>
                   <figure>
                     <img src={image} alt={title} />
                   </figure>
                 </div>
-                <Link to={url.link}> {url.name}</Link>
+                {url.link && (
+                  <a
+                    href={url.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onMouseEnter={() => setOpen(true)}
+                    onMouseLeave={() => setOpen(false)}
+                  >
+                    {url.name}
+                  </a>
+                )}
               </div>
               <p>{desc}</p>
             </div>
@@ -147,8 +135,8 @@ const About = () => {
           </div>
         ))}
       </div>
-      <div className='fixed_intro'>
-        <h1>About Me.</h1>
+      <div className="fixed_intro" aria-hidden="true">
+        <p>About Me.</p>
       </div>
     </section>
   );

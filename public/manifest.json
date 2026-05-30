@@ -1,0 +1,16 @@
+{
+  "name": "Mohamed Mahmoud Portfolio",
+  "short_name": "MM Portfolio",
+  "description": "Portfolio of Mohamed Mahmoud Brzan — Full Stack Software Engineer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdfc",
+  "theme_color": "#fffdfc",
+  "icons": [
+    {
+      "src": "/appLogo.webp",
+      "sizes": "any",
+      "type": "image/webp"
+    }
+  ]
+}

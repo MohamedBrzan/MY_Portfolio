@@ -1,0 +1,31 @@
+@use '../../Scss/Variables' as *;
+
+.not-found {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+	gap: 1rem;
+	h1 {
+		font-size: 8rem;
+		font-weight: 900;
+		color: $secondary_color;
+	}
+	p {
+		font-size: 1.5rem;
+		color: $secondary_color;
+	}
+	a {
+		margin-top: 1rem;
+		padding: 0.75rem 2rem;
+		background-color: $third_color;
+		color: $main_color;
+		text-decoration: none;
+		border-radius: 0.4rem;
+		font-weight: 600;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}

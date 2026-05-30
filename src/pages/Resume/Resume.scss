@@ -1,8 +1,18 @@
 @use '../../Scss/Variables' as *;
 @use '../../Scss/ClassNames' as *;
 
-.resume{
-
-
-
+.resume {
+	@extend %responsive_width;
+	padding: 2rem;
+	h1 {
+		font-weight: bold;
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+	.resume_content {
+		object {
+			border: 1px solid $secondary_color;
+			border-radius: 0.4rem;
+		}
+	}
 }
